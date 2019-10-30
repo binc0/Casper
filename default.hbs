@@ -28,12 +28,18 @@
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
+                <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} Made with ♥ by <a href="http://binco.ml">Binco</a></section>
                 <nav class="site-footer-nav">
-                    <a href="{{@site.url}}">Latest Posts</a>
-                    {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
-                    {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                    <a href="{{@blog.url}}">{{t "Latest Posts"}}</a>
+                    {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
+                    {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+                    {{!-- Instagram --}}
+                    <a href="https://instagram.com/owo.sound" rel="nofollow" target="_blank">Instagram</a>
+                </nav>
+                <nav class="site-footer-nav">
+                    <a href="{{@blog.url}}/contattaci">Contattaci</a>
+                    <a href="https://angel.co/owo-sound/jobs">Lavora con noi</a>
+                    <a href="{{@blog.url}}/contattaci">Sponsorizza</a>
                 </nav>
             </div>
         </footer>
